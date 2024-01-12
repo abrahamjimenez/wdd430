@@ -11,16 +11,35 @@ var WooCommerce = new WooCommerceRestApi({
 });
 WooCommerce.get("products")
     .then(function (response) {
-    console.log("Products:", response.data);
+    // response returns an object with data, but thats too much typing so im good
+    // console.log("Products:", response.data);
     response.data.forEach(function (product) {
+        // console.log(product)
+        // product returns a list with a bunch of data
         var name = product.name;
         var sku = product.sku;
         var stock = product.stock_quantity;
         var price = product.price;
-        console.log(name);
-        console.log(sku);
-        console.log(stock);
-        console.log(price);
+        var categories = product.categories; // Array of objects
+        var tags = product.tags; // Array of any
+        var featured = product.featured; // Boolean
+        var images = product.images; // Array
+        // console.log(name);
+        // console.log(sku);
+        // console.log(stock);
+        // console.log(price);
+        // console.log(categories);
+        /*categories.forEach((category) => {
+            console.log(category.name)
+        })*/
+        // console.log(tags); I got no tags 👁️👄👁️
+        // console.log(featured);
+        // console.log(images)
+        /* images.forEach((image) => {
+             // console.log(image)
+             console.log(image.src)
+             // console.log(image.images[0].src)
+         })*/
     });
 })
     .catch(function (error) {

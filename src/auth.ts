@@ -12,20 +12,46 @@ const WooCommerce = new WooCommerceRestApi({
 });
 
 WooCommerce.get("products")
-    .then((response) => {
-        console.log("Products:", response.data);
+    .then((response: any) => {
+        // response returns an object with data, but thats too much typing so im good
+        // console.log("Products:", response.data);
 
-        response.data.forEach((product) => {
-            const name = product.name;
-            const sku = product.sku;
-            const stock = product.stock_quantity;
-            const price = product.price;
+        response.data.forEach((product: any) => {
+            // console.log(product)
+            // product returns a list with a bunch of data
 
-            console.log(name);
-            console.log(sku);
-            console.log(stock);
-            console.log(price);
-        })
+            const name: string = product.name;
+            const sku: string = product.sku;
+            const stock: number = product.stock_quantity;
+            const price: string = product.price;
+
+            const categories = product.categories; // Array of objects
+            const tags = product.tags; // Array of any
+            const featured: boolean = product.featured; // Boolean
+
+            const images = product.images; // Array
+
+            // console.log(name);
+            // console.log(sku);
+            // console.log(stock);
+            // console.log(price);
+
+            // console.log(categories);
+            /*categories.forEach((category) => {
+                console.log(category.name)
+            })*/
+
+            // console.log(tags); I got no tags 👁️👄👁️
+            // console.log(featured);
+
+            // console.log(images)
+            /* images.forEach((image) => {
+                 // console.log(image)
+                 console.log(image.src)
+                 // console.log(image.images[0].src)
+             })*/
+
+        });
     })
     .catch((error) => {
         console.error("Error retrieving products:", error);
