@@ -4,18 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc_woocommerce": "tsc src/woocommerce.ts --watch",
-    "run_woocommerce": "node src/woocommerce.js"
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "tsc_fetch": "tsc src/fetch.ts --watch",
+    "tsc_input": "tsc src/input.ts --watch"
   },
   "author": "Abraham Jimenez",
   "license": "ISC",
   "devDependencies": {
+    "@types/woocommerce__woocommerce-rest-api": "^1.0.5",
     "axios": "^1.6.5",
+    "nodemon": "^3.0.2",
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
     "@types/node": "^20.11.0",
-    "@woocommerce/woocommerce-rest-api": "^1.0.1",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
   }
 }

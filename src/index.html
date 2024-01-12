@@ -6,20 +6,21 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Typescript Tailwind</title>
-    <link rel="stylesheet" href="output.css">
+    <script src="fetch.js" defer></script>
     <script src="input.js" defer></script>
+    <link rel="stylesheet" href="output.css">
 </head>
 <body>
-<header></header>
+<header>
+    <h1 class="text-4xl">Featured Products</h1>
+</header>
 
-<main>
-    <h1 class="bg-amber-50">Abraham Jimenez</h1>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
-    <div id="copyright">&copy; <span id="year"></span></div>
+<main class="bg-gray-200">
+
 </main>
 
-<footer></footer>
+<footer class="flex items-center justify-center">
+    <p>&copy; <span id="year"></span></p>
+</footer>
 </body>
 </html>
