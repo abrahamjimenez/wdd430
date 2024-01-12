@@ -29,17 +29,25 @@ WooCommerce.get("products")
         // console.log(stock);
         // console.log(price);
         // console.log(categories);
-        /*categories.forEach((category) => {
-            console.log(category.name)
-        })*/
+        var categoryList = [];
+        categories.forEach(function (c) {
+            categoryList.push(c.name);
+        });
+        // console.log(categoryList);
+        // console.log(categories.length)
         // console.log(tags); I got no tags 👁️👄👁️
         // console.log(featured);
         // console.log(images)
-        /* images.forEach((image) => {
-             // console.log(image)
-             console.log(image.src)
-             // console.log(image.images[0].src)
-         })*/
+        images.forEach(function (image) {
+            // console.log(image)
+            console.log(image.src);
+            console.log(name);
+            console.log(sku);
+            console.log(stock);
+            console.log(price);
+            console.log(categoryList);
+            console.log(featured);
+        });
     });
 })
     .catch(function (error) {
