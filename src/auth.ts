@@ -1,3 +1,5 @@
+// todo: remove any
+// todo: display data
 import dotenv = require("dotenv");
 
 dotenv.config();
@@ -13,7 +15,7 @@ const WooCommerce = new WooCommerceRestApi({
 
 WooCommerce.get("products")
     .then((response: any) => {
-        // response returns an object with data, but thats too much typing so im good
+        // response returns an object with data, but that's too much typing so im good
         // console.log("Products:", response.data);
 
         response.data.forEach((product: any) => {
@@ -26,7 +28,6 @@ WooCommerce.get("products")
             const price: string = product.price;
 
             const categories = product.categories; // Array of objects
-            const tags = product.tags; // Array of any
             const featured: boolean = product.featured; // Boolean
 
             const images = product.images; // Array
@@ -37,10 +38,10 @@ WooCommerce.get("products")
             // console.log(price);
 
             // console.log(categories);
-            let categoryList = []
-            categories.forEach((c) => {
-                categoryList.push(c.name)
-            })
+            let categoryList = [];
+            categories.forEach((category: any) => {
+                categoryList.push(category.name);
+            });
             // console.log(categoryList);
             // console.log(categories.length)
 
@@ -56,7 +57,7 @@ WooCommerce.get("products")
                 console.log(stock);
                 console.log(price);
                 console.log(categoryList);
-                console.log(featured)
+                console.log(featured);
             });
 
         });
