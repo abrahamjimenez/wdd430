@@ -2,7 +2,6 @@
 import dotenv = require("dotenv");
 
 dotenv.config();
-
 interface CategoryData {
     id: number
     name: string
@@ -55,7 +54,7 @@ WooCommerce.get("products")
             // console.log(featured);
 
             // console.log(images)
-            /*images.forEach((image: any) => {
+            images.forEach((image: any) => {
                 // console.log(image)
                 console.log(image.src);
                 console.log(name);
@@ -64,7 +63,7 @@ WooCommerce.get("products")
                 console.log(price);
                 console.log(categoryList);
                 console.log(featured);
-            });*/
+            });
 
         });
     })

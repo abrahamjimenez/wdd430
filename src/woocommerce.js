@@ -39,7 +39,7 @@ WooCommerce.get("products")
         // console.log(tags); I got no tags 👁️👄👁️
         // console.log(featured);
         // console.log(images)
-        /*images.forEach((image: any) => {
+        images.forEach(function (image) {
             // console.log(image)
             console.log(image.src);
             console.log(name);
@@ -48,7 +48,7 @@ WooCommerce.get("products")
             console.log(price);
             console.log(categoryList);
             console.log(featured);
-        });*/
+        });
     });
 })
     .catch(function (error) {
