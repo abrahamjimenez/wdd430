@@ -9,6 +9,12 @@
   "author": "Abraham Jimenez",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^1.6.5",
     "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.0",
+    "@woocommerce/woocommerce-rest-api": "^1.0.1",
+    "dotenv": "^16.3.1"
   }
 }
