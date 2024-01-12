@@ -1,8 +1,13 @@
-// todo: remove any
 // todo: display data
 import dotenv = require("dotenv");
 
 dotenv.config();
+
+interface CategoryData {
+    id: number
+    name: string
+    slug: string
+}
 
 const WooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 
@@ -19,7 +24,7 @@ WooCommerce.get("products")
         // console.log("Products:", response.data);
 
         response.data.forEach((product: any) => {
-            // console.log(product)
+            // console.log(product);
             // product returns a list with a bunch of data
 
             const name: string = product.name;
@@ -39,7 +44,8 @@ WooCommerce.get("products")
 
             // console.log(categories);
             let categoryList = [];
-            categories.forEach((category: any) => {
+            categories.forEach((category: CategoryData) => {
+                // console.log(category);
                 categoryList.push(category.name);
             });
             // console.log(categoryList);
@@ -49,7 +55,7 @@ WooCommerce.get("products")
             // console.log(featured);
 
             // console.log(images)
-            images.forEach((image: any) => {
+            /*images.forEach((image: any) => {
                 // console.log(image)
                 console.log(image.src);
                 console.log(name);
@@ -58,7 +64,7 @@ WooCommerce.get("products")
                 console.log(price);
                 console.log(categoryList);
                 console.log(featured);
-            });
+            });*/
 
         });
     })
