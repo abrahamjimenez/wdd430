@@ -11,7 +11,6 @@ function displayData() {
             var categories = product.categories; // Array of objects
             var featured = product.featured; // Boolean
             var images = product.images; // Array
-            console.log(images);
             var categoryList = [];
             categories.forEach(function (category) {
                 categoryList.push(category.name);
