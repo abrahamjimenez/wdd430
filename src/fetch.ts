@@ -19,7 +19,7 @@ interface ProductData {
 const main: HTMLElement = document.querySelector("main");
 
 function displayData(): void {
-    fetch("https://vivantaire.com/wp-json/wc/v3/products?consumer_key=ck_665f65ce8f554103aa7998be28c922d4364afc4a&consumer_secret=cs_1f6396ce119551bf6d3d44d6cfa0a8435babc0c1")
+    fetch("https://vivantaire.com/wp-json/wc/v3/products?consumer_key=ck_570738209453c709d994d336b992ca2c0646e0de&consumer_secret=cs_1eceb6db81ee33382c362f43a2c46182629c3df6")
         .then(response => response.json())
         .then(data => {
             data.forEach((product: ProductData): void => {
